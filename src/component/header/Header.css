@@ -1,0 +1,120 @@
+.header {
+    height: 440px;
+    width: 100%;
+    /* border: 1px solid; */
+    position: relative;
+    color: white;
+
+
+}
+
+.header::before {
+    content: '';
+    background: url('../../images/main_image.png');
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 440px;
+    width: 100%;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+.header_data {
+    position: absolute;
+    bottom: 90px;
+    left: 200px;
+
+}
+
+.header_data h2 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 47px;
+    margin-bottom: 6px;
+}
+
+.header_data p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.header_phone {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px;
+    align-items: center;
+    display: none;
+}
+
+.header_phone button {
+    width: 80px;
+    height: 30px;
+    border: 0.8px solid #FFFFFF;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    background-color:black;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.header_phone img {
+    height: 18px;
+    width: 18px;
+}
+
+@media only screen and (max-width:1000px) {
+    .header_data {
+        left: 100px;
+
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .header_data {
+        left: 30px;
+        bottom: 70px;
+
+    }
+
+    .header {
+        height: 300px;
+    }
+
+    .header::before {
+        height: 300px;
+    }
+
+    .header_data h2 {
+        font-size: 25px;
+    }
+
+    .header_data p {
+        font-size: 17px;
+    }
+
+    .user_work {
+        width: 60px;
+    }
+    .header_phone{
+        display: flex;
+    }
+}
+@media only screen and (max-width:450px) {
+    .header_data h2 {
+      font-size: 18px;
+      margin-bottom: -10px;
+    }
+    
+    .header_data p {
+    font-size: 14px;
+    }
+}

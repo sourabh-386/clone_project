@@ -1,0 +1,39 @@
+.aside{
+    position: absolute;
+    /* border: 1px solid green; */
+    width: 75%;
+    right: 0px;
+   
+    
+}
+.aside_para{
+    display: flex;
+    opacity: 0.8;
+    font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 25px;
+justify-content: center;
+align-items: center;
+text-align: start;
+position: relative;
+/* border: 1px solid black; */
+padding-left: 30px;
+
+}
+.aside_para img{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    /* margin-right: 10px; */
+    left: 1px;
+    top: 5px;
+}
+.aside_recom{
+    margin-top: 20px;
+}
+@media only screen and (max-width:1000px){
+    .aside{
+        width: 85%;
+    }
+}

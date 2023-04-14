@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+.top{
+    /* border: 1px solid; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    height: 72px;
+    align-items: center;
+    font-family: 'IBM Plex Sans';
+position: relative;
+}
+.top_last{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 200px;
+    
+}
+.main_img{
+    width: 162.57px;
+height: 24px;
+}
+.top_search{
+    position: relative;
+}
+.top_search img{
+    position: absolute;
+    left: 20px;
+    top: 12px;
+}
+.top_search input{
+    font-weight: 500;
+    width: 360px;
+height: 42px;
+background: #F2F2F2;
+border-radius: 21px;
+border: none;
+text-align: center;
+font-size: 14px;
+/* position: absolute; */
+}
+.top_last{
+    font-style: normal;
+font-weight: 600;
+font-size: 16px;
+color: #2E2E2E;
+line-height: 21px;
+position: relative;
+}
+.top_last_color{
+    color: rgba(47, 108, 229, 1);
+}
+.top_last img{
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    width: 10px;
+    height: 5px;
+}
+.top_phone{
+        display: flex;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+display: none;
+}
+.top_phone img{
+      margin-right: 10px; 
+      width: 15px; 
+}
+
+@media only screen and (max-width:1000px){
+    .top{
+        width: 95%;
+    }
+}
+@media only screen and (max-width:800px){
+    .top_search,.top_last{
+        display: none;
+    }
+    .top_phone{
+display: flex;
+    }
+    .top{
+    height: 34px;
+
+        /* margin-bottom: -20px; */
+    }
+}
+
+@media only screen and (max-width:500px){
+.main_img{
+    display: none;
+}
+
+}
