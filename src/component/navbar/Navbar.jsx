@@ -9,12 +9,8 @@ import { context } from '../../context/context'
 const Navbar = () => {
 
   // let [navlink, setnavlink] = useState(false)
-const {login,setlogin}=useContext(context)
-console.log(login)
+const {setlogin}=useContext(context)
 
-  function show_login(){
-
-  }
 
   let nav_value = false
   const navlink = useRef(null)

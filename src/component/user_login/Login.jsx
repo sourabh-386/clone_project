@@ -8,33 +8,42 @@ import img from '../../images/login/513049 PI8X2J 876.png'
 import cross from '../../images/cross.png'
 import { useContext } from 'react'
 import { context } from '../../context/context'
+import close from '../../images/cross.png'
 
 
 const Login = () => {
 
-const {login,setlogin}=useContext(context)
+const {setlogin}=useContext(context)
 
 
     const user_form = useRef(null)
 
   
     function gotosign() {
-        console.log('click')
-        // user_form.current.style.diplay = 'none'
-        // user_form.current.style.display = 'none'
-        // user_form.current.style.right = '736px'
-        user_form.current.style.transform = 'translate(-736px, 50px)';
+   const window_width=window.innerWidth;
+
+   if(window_width>750){
+    
+        user_form.current.style.transform = 'translate(-736px, 0px)';
+    }
+    else{
+
+        user_form.current.style.transform = 'translate(-350px, 0px)';
+        
+    }
 
 
 
     }
     function gotocreate() {
-        user_form.current.style.transform = 'translate(0px, 50px)';
+        user_form.current.style.transform = 'translate(0px, 0px)';
 
     }
 
     return (
         <div className='fixed_div'>
+      <div className='close' onClick={()=>setlogin(false)}> <img src={close} alt="img" /></div>
+
             <div className="user_form" ref={user_form}>
                 <div className="user_form_login">
                     <p className="user_form_login_para">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
@@ -86,17 +95,12 @@ const {login,setlogin}=useContext(context)
                         <div className="form_grid">
                             <div className="user_detail">
                                 <div className="user_detail_form">
-                                    {/* <div className="user_detail_name">
-                                        <input type="text" placeholder='First Name' />
-                                        <input type="text" placeholder='Last Name' className='last_name' />
-
-                                    </div> */}
+    
                                     <input type="email" placeholder='Email' />
                                     <div className="user_password" >
                                         <input type="password" placeholder='Password' />
                                         <i class='bi bi-eye'></i>
                                     </div>
-                                    {/* <input type="password" placeholder='Confirm Password' /> */}
                                 </div>
                                 <div className="login_btn">
 
@@ -107,8 +111,7 @@ const {login,setlogin}=useContext(context)
                                 </div>
                             </div>
                             <div className="user_detail_img">
-                                <img src={img} alt="" />
-                                {/* <p>By signing up, you agree to our Terms & conditions, Privacy policy</p> */}
+                                <img src={img} alt="img" />
 
                             </div>
                         </div>

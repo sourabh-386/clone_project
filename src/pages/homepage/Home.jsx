@@ -8,13 +8,13 @@ import close from '../../images/cross.png'
 
 const Home = () => {
 
-  const { login, setlogin } = useContext(context)
+  const { login } = useContext(context)
 
   // console.log(name)
   return (
     <div>
     {/* filter: brightness(50%); */}
-      <div className="home" style={{backgroundColor:'white',filter:`${!login?"brightness(100%)":'brightness(40%)'}`}} >
+      <div className="home" style={{backgroundColor:'white',filter:`${!login?"brightness(100%)":'brightness(30%)'}`}} >
         <Top />
         <Header />
         <br />
@@ -34,10 +34,9 @@ const Home = () => {
           </div>
 
         </div>
-      </div>
+      </div >
       {
         !login ? '' : <div className="login_user"><Login />
-      <div className='close' onClick={()=>setlogin(false)}> <img src={close} alt="" /></div>
 
         </div>
 
